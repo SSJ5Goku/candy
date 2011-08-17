@@ -317,20 +317,19 @@ ul {
 
 .message-pane dd {
 	overflow: auto;
-	padding: 2px 0 1px 130px;
+	padding: 2px 0 1px 10px;
 	margin: 0 0 2px 0;
 	white-space: -o-pre-wrap; /* Opera */
 	word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
-.message-pane dd .label {
+.message-pane dd .name {
+	color: #777;
+}
+
+.message-pane dd .name a {
+	color: #777;
 	font-weight: bold;
-	white-space: nowrap;
-	display: block;
-	margin-left: -125px;
-	width: 120px;
-	float: left;
-	overflow: hidden;
 }
 
 .message-pane .subject {

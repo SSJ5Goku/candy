@@ -1492,9 +1492,17 @@ Candy.View.Pane = (function(self, $) {
 		show: function(roomJid, name, message, timestamp) {
 			message = Candy.Util.Parser.all(message.substring(0, 1000));
 			message = Candy.View.Event.Message.beforeShow(message);
-			var html = Mustache.to_html(Candy.View.Template.Message.item, {
+			var template;
+			if (message.substr(0, 4) == '/me ') {
+				template = Candy.View.Template.Message.action;
+				message = message.substr(4);
+			} else {
+				template = Candy.View.Template.Message.item;
+				name = Candy.Util.crop(name, 20)
+			}
+			var html = Mustache.to_html(template, {
 				name: name,
-				displayName: Candy.Util.crop(name, 10),
+				displayName: name,
 				message: message,
 				time: Candy.Util.localizedTime(timestamp || new Date().toGMTString())
 			});
