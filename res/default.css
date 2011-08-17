@@ -18,12 +18,12 @@ html, body {
 	right: 0;
 	left: 0;
 	background-color: #ccc;
-	color: #333;
+	color: #000;
 	overflow: hidden;
 }
 
 a {
-	color: #333;
+	color: #33f;
 	text-decoration: none;
 }
 
