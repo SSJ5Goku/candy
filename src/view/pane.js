@@ -1328,7 +1328,7 @@ Candy.View.Pane = (function(self, $) {
 						userId : userId,
 						userJid: user.getJid(),
 						nick: user.getNick(),
-						displayNick: Candy.Util.crop(user.getNick(), 15),
+						displayNick: Candy.Util.crop(user.getNick(), 20),
 						role: user.getRole(),
 						affiliation: user.getAffiliation(),
 						me: currentUser !== undefined && user.getNick() === currentUser.getNick(),
