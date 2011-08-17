@@ -103,6 +103,9 @@ Candy.Core.Action = (function(self, Strophe, $) {
 				var connection = Candy.Core.getConnection(),
 					nick = connection.stream_id,
 					jid = connection.jid;
+				if(Candy.Core.getOptions().defaultNick) {
+					nick = Candy.Core.getOptions().defaultNick;
+				}
 				Candy.Core.setUser(new Candy.Core.ChatUser(jid, nick));
 			}
 		},
