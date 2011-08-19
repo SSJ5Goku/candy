@@ -56,7 +56,8 @@ Candy.View.Template = (function(self){
 
 	self.Message = {
 		pane: '<div class="message-pane-wrapper"><dl class="message-pane"></dl></div>',
-		item: '<dt>{{time}}</dt><dd><span class="label"><a href="#" class="name">{{displayName}}</a></span>{{{message}}}</dd>'
+                item: '<dt>{{time}}</dt><dd><span class="name">&lt;<a href="#">{{displayName}}</a>&gt;</span> {{{message}}}</dd>',
+                action: '<dt>{{time}}</dt><dd>** <span class="name"><a href="#">{{displayName}}</a></span> {{{message}}}</dd>',
 	};
 
 	self.Login = {
