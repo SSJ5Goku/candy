@@ -4,3 +4,5 @@ example/.htaccess
 ._*
 .ndproj
 .idea
+candy.bundle.js
+candy.min.js
