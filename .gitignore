@@ -1,6 +1,4 @@
-docs
-example/.htaccess
-.DS_Store
-._*
-.ndproj
-.idea
+/candy.bundle.js
+/candy.min.js
+/libs/libs.bundle.js
+/libs/libs.min.js
