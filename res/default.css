@@ -8,20 +8,13 @@
 #candy {
 	margin: 0;
 	padding: 0;
-	font-family: Arial, Helvetica, sans-serif;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	background-color: #ccc;
-	color: #000;
 	overflow: hidden;
-}
-
-#candy a {
-	color: #33f;
-	text-decoration: none;
 }
 
 #candy ul {
