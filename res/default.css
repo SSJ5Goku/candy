@@ -46,20 +46,22 @@
 	white-space: nowrap;
 }
 
-#chat-tabs li a {
+#chat-tabs li span {
+	font-weight: bold;
 	background-color: #ddd;
 	padding: 6px 50px 4px 10px;
 	display: inline-block;
 	color: #666;
 	height: 20px;
+	cursor: pointer;
 }
 
-#chat-tabs li.active a {
+#chat-tabs li.active span {
 	background-color: white;
 	color: black;
 }
 
-#chat-tabs li a.transition {
+#chat-tabs li span.transition {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -80,7 +82,7 @@
 	color: #999;
 }
 
-#chat-tabs li.active a.transition {
+#chat-tabs li.active span.transition {
 	color: gray;
 	background: url(img/tab-transitions.png) repeat-y -50px;
 }
@@ -101,7 +103,7 @@
 	border-radius: 3px;
 }
 
-#chat-tabs li.offline a.label {
+#chat-tabs li.offline span.label {
 	text-decoration: line-through;
 }
 
