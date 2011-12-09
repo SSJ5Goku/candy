@@ -1680,7 +1680,7 @@ Candy.View.Pane = (function(self, $) {
 				}
 			};
 			if (message.substr(0, 4) == '/me ') {
-				renderEvtData.templateData.template = Candy.View.Template.Message.action;
+				renderEvtData.template = Candy.View.Template.Message.action;
 				renderEvtData.templateData.message = message.substr(4);
 				renderEvtData.templateData.displayName = name;
 			}
