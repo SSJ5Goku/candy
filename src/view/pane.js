@@ -262,18 +262,7 @@ Candy.View.Pane = (function(self, $) {
 		 *   (Boolean) - false, this will stop the event from bubbling
 		 */
 		allTabsClosed: function() {
-			Candy.Core.disconnect();
-			self.Chat.Toolbar.hide();
 			return;
-			// this is a workaround because browsers prevent to close non-js-opened windows
-			/*if($.browser.msie) {
-				this.focus();
-				self.opener = this;
-				self.close();
-			} else {
-				window.open(location.href, '_self');
-				window.close();
-			}*/
 		},
 
 		/** Function: fitTabs
