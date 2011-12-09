@@ -100,14 +100,12 @@ Candy.Core = (function(self, Strophe, $) {
 
 		// Enable debug logging
 		if(_options.debug) {
-			self.log = function(str) {
-				try { // prevent erroring
-					if(typeof window.console !== undefined && typeof window.console.log !== undefined) {
-						console.log(str);
-					}
-				} catch(e) {
-					//console.error(e);
+			if(typeof window.console !== undefined && typeof window.console.log !== undefined) {
+				self.log = function(str) {
+					console.log(str);
 				}
+			} else {
+				self.log = function(str) {}
 			};
 			self.log('[Init] Debugging enabled');
 		}
