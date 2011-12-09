@@ -1347,6 +1347,43 @@ Candy.View.Pane = (function(self, $) {
 					return $('#chat-room-' + self.Chat.rooms[roomJid].id);
 				}
 			}
+		},
+		
+		/** Function: setMessageFormEnabled
+		 * Enable or disable the message form, preventing the user from sending messages.
+		 * Parameters:
+		 *   (String) roomJid - Room in which the pane lies
+		 *   (boolean) enabled - whether or not the form is enabled
+		 */
+		setMessageFormEnabled: function(roomJid, enabled, reason) {
+			var messageForm = self.Room.getPane(roomJid, '.message-form');
+			if(!messageForm) {
+				console.log("setMessageFormEnabled: messageForm not found for " + roomJid);
+				return;
+			}
+			
+			if(enabled){
+				messageForm.children('.field').removeAttr('disabled');
+				messageForm.children('.submit').removeAttr('disabled');
+			} else {
+				messageForm.children('.field').attr('disabled', true);
+				messageForm.children('.submit').attr('disabled', true);
+			}
+		},
+		
+		/** Function: setMessageText
+		 * Set the text of the message form
+		 * Parameters:
+		 *   (String) roomJid - Room in which the pane lies
+		 *   (String) text
+		 */
+		setMessageText: function(roomJid, text) {
+			var messageForm = self.Room.getPane(roomJid, '.message-form');
+			if(!messageForm) {
+				console.log("setMessageText: messageForm not found for " + roomJid);
+				return;
+			}
+			messageForm.children('.field')[0].value = text;
 		}
 	};
 
