@@ -164,11 +164,6 @@ Candy.View.Event = (function(self, $) {
 		 *   (String) message
 		 */
 		beforeShow: function(args) {
-			//Remove swears; var swears (array) is included in an external file or hardcoded 
-			var msg = args.message;
-			msg = msg.replace(new RegExp(swears, "ig"), "&lt;censored&gt;");
-			args.message = msg;
-			// return censored message
 			return args.message;
 		},
 		
