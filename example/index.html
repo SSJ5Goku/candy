@@ -16,7 +16,6 @@
 				core: { debug: false, defaultNick: Candy.generateRandomNick() },
 				view: { resources: '../res/' }
 			});
-			$(Candy.View.Pane.Message).on('beforesend', function(evtData){ 	evtData = evtData.replace(new RegExp(swears, "ig"), "&lt;censored&gt;");return evtData })
 			Candy.Core.connect();
 		});
 	</script>
